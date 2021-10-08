@@ -1,10 +1,8 @@
 import React from 'react';
-import Dashboard from './pages/index';
-
-
+import Routes from './routes';
 function App() {
   return (
-   <Dashboard />
+   <Routes />
   );
 }
 
