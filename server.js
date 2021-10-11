@@ -12,5 +12,7 @@ app.use(express.static(path.join(__dirname)));
 app.use(express.static(path.join(__dirname, "static")));
 app.use(express.static(path.join(__dirname, "build", "static")));
 
+app.get('/*',(req,res)=>res.send('Hello'))
+
 app.listen(process.env.PORT || 5000);
 module.exports = app;
