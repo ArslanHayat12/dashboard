@@ -1,4 +1,4 @@
-const functions = require("firebase-functions");
+
 var express = require('express');
 var path = require('path');
 const cors = require('cors');
