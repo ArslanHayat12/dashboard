@@ -17,7 +17,7 @@ export const MenuCustom = () => {
         setSession({ ...session, isAuthenticated: true })
         history.push(e.key)
     }
-    
+
     return (
         <MenuStyle className="menu">
             <h1 className="title">
@@ -33,15 +33,6 @@ export const MenuCustom = () => {
                                 </Menu.Item>
                             )
                         })}
-                        {/* <Menu.Item key="/dashboard" icon={<AreaChartOutlined />}>
-                                Dashboard
-                            </Menu.Item>
-                        )}
-                        {session.role === 'user' && (
-                            <Menu.Item key="/about" icon={<AppstoreOutlined />}>
-                                About Us
-                            </Menu.Item>
-                        )} */}
                     </Menu>
                 </article>
             </section>
