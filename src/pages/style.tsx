@@ -3,7 +3,7 @@ import { Card } from 'antd'
 export const AntdCardStyleContainer = styled(Card)`
     height: fit-content;
     .container {
-        height: 80vh;
+        height: 95vh;
         position: relative;
         width: 100%;
         overflow: hidden;

@@ -1,6 +1,7 @@
 import { useHistory } from "react-router";
 import { useSessionContext } from "../../context/SessionContext";
 import { roleBasedRoutes } from "../../models/session";
+import { LoginStyle } from "./style";
 
 export default function Login() {
   const [session, setSession] = useSessionContext();
@@ -18,5 +19,5 @@ export default function Login() {
     history.push(roleBasedRoutes[role].redirectPath);
   }
 
-  return <><button onClick={handleUserLogin}>User Login</button><button onClick={handleLogin}>Admin Login</button></>;
+  return <LoginStyle><button onClick={handleUserLogin}>User Login</button><button onClick={handleLogin}>Admin Login</button></LoginStyle>;
 }

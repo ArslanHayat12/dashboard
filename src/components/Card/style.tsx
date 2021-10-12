@@ -3,7 +3,7 @@ import {Card} from 'antd'
 export const CardStyle=styled.div<{type}>`
 
 &.card {
-  height:   ${props => props.type==='sm'?"100px":props.type==='md'?"300px":props.type==='lg'?"80vh":"300px"}  ;
+  height:   ${props => props.type==='sm'?"100px":props.type==='md'?"300px":props.type==='lg'?"95vh":"300px"}  ;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.25);
