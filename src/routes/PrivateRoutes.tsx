@@ -7,9 +7,10 @@ export type PrivateRoutesProps = {
   authenticationPath: string;
   redirectPath: string;
   setRedirectPath: (path: string) => void;
+  role:'admin'|'user'
 } & RouteProps;
 
-export default function PrivateRoutes({isAuthenticated, authenticationPath, redirectPath, setRedirectPath, ...routeProps}: PrivateRoutesProps) {
+export default function PrivateRoutes({isAuthenticated, authenticationPath, redirectPath, setRedirectPath,role, ...routeProps}: PrivateRoutesProps) {
   const currentLocation = useLocation();
 
   useEffect(() => {
@@ -20,7 +21,8 @@ export default function PrivateRoutes({isAuthenticated, authenticationPath, redi
 
   if(isAuthenticated && redirectPath === currentLocation.pathname) {
     return<> <MenuCustom /><Route {...routeProps} /></>;
-  } else {
+  }
+   else {
     return <Redirect to={{ pathname: isAuthenticated ? redirectPath : authenticationPath }} />;
   }
 };

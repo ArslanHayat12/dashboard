@@ -18,7 +18,7 @@ app.get('/',(req,res)=>res.send('Hello'))
 passport.use(new GoogleStrategy({
     clientID: '963093892208-tjm4vak0dd45mejh4c8orjd5el4cf3r5.apps.googleusercontent.com',
     clientSecret: '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',
-    callbackURL: "https://intense-badlands-09891.herokuapp.com/auth/google/callback"
+    callbackURL: "http://localhost:5000/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
  
@@ -31,6 +31,7 @@ app.get('/auth/google',
 app.get('/auth/google/callback', 
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
+      console.log('here')
     // Successful authentication, redirect home.
     res.redirect('/');
   });

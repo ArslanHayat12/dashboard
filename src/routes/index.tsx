@@ -16,14 +16,15 @@ export default function Routes() {
     isAuthenticated: !!sessionContext.isAuthenticated,
     authenticationPath: '/login',
     redirectPath: sessionContext.redirectPath,
-    setRedirectPath: setRedirectPath
+    setRedirectPath: setRedirectPath,
+    role:'admin'
   };
 
   return (
     <div>
       <Switch>
         <PrivateRoutes {...defaultPrivateRoutesProps} redirectPath="/dashboard" path='/dashboard' component={Dashboard} />
-        <PrivateRoutes {...defaultPrivateRoutesProps} redirectPath="/about" path='/about' component={About} />
+        <PrivateRoutes {...defaultPrivateRoutesProps} redirectPath="/about" path='/about' component={About} role='user' />
         <Route path='/login' component={Login} />
         <Redirect
             to={{
